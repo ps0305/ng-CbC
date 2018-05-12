@@ -10,7 +10,7 @@ export class ParentComponent implements OnInit {
   private data:Array<any>;
 
   constructor() { 
-    this.data=[
+    this.data = [
       {p_id:111,p_name:'p_one', p_cost:10000},
       {p_id:222,p_name:'p_two',p_cost:20000},
       {p_id:333,p_name:'p_three',p_cost:30000},
@@ -21,7 +21,7 @@ export class ParentComponent implements OnInit {
 
   ngOnInit() {
   }
-  public click(data){
+  public clickMe(data){
     alert(data);
   }
 

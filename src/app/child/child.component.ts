@@ -1,5 +1,6 @@
 import { Component, OnInit, Input ,Output} from '@angular/core';
 import { EventEmitter } from '@angular/core';
+import {Alert} from 'selenium-webdriver';
 
 @Component({
   selector: 'app-child',
@@ -7,20 +8,19 @@ import { EventEmitter } from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent implements OnInit {
-  @Input('_id') product_id;
-  @Input('_name') product_name;
-  @Input('_cost') product_cost;
+  @Input('_id') p_id;
+  @Input('_name') p_name;
+  @Input('_cost') p_cost;
+
   @Output() sendData:EventEmitter <any> = new EventEmitter();
   
-    constructor() {
-      
-     }
+    constructor() {}
 
   ngOnInit() {
     
   }
   public clickMe(){
-    this.sendData.emit(this.product_id+"..."+this.product_name+"..."+this.product_cost);
+    this.sendData.emit(this.p_id+"..."+this.p_name+"..."+this.p_cost);
   }
 
 }
