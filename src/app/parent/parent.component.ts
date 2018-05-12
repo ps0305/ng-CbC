@@ -21,5 +21,8 @@ export class ParentComponent implements OnInit {
 
   ngOnInit() {
   }
+  public click(data){
+    alert(data);
+  }
 
 }
